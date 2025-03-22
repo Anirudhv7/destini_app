@@ -5,7 +5,7 @@ class Story {
   String choice1;
   String choice2;
 
-//Story class has a constructor which can only have string called storyTitle, String choice1 and String choice2
+//Story class has a constructor which can only have a string called storyTitle, String choice1 and String choice2
   Story(
       {required this.storyTitle, required this.choice1, required this.choice2});
 }

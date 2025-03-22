@@ -13,7 +13,7 @@ class Destini extends StatelessWidget {
   Widget build(BuildContext context) {
     //Material App is being built
     return MaterialApp(
-      //Body of the entire functionl part of the app
+      //Body of the entire functional part of the app
       home: StoryPage(),
     );
   }
@@ -38,7 +38,7 @@ class _StoryPageState extends State<StoryPage> {
       body: Container(
         //Box Decoration is added to decorate the Container
         decoration: BoxDecoration(
-          //Background image is beng added
+          //Background image is being added
           image: DecorationImage(
             //Background image is locally stored in 'assets' folder
             image: AssetImage('images/background.png'),
@@ -48,13 +48,13 @@ class _StoryPageState extends State<StoryPage> {
         ),
         padding: EdgeInsets.all(25.0),
         child: SafeArea(
-          // Column widget is being added to set all the childern alinged vetically
+          // Column widget is being added to set all the childern aligned vertically
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
-                  //flex is used to give the widget 12 portions of the secreen space
+                  //flex is used to give the widget 12 portions of the screen space
                   flex: 12,
                   child: Center(
                     child: Text(
@@ -94,7 +94,7 @@ class _StoryPageState extends State<StoryPage> {
                         child: Text(
                           //Text Align is used to center all the choices in the center of the button
                           textAlign: TextAlign.center,
-                          // Object storyBrain is acessing the StoryBrain for the choice1 in the storyData list
+                          // Object storyBrain is accessing the StoryBrain for the choice1 in the storyData list
                           storyBrain.getChoice1(),
                           style: TextStyle(
                             //White color is given to contrast the green color
@@ -108,7 +108,7 @@ class _StoryPageState extends State<StoryPage> {
                   ),
                 ),
               ),
-              //Sized Box is used to change the vertical height by 20 pixles
+              //Sized Box is used to change the vertical height by 20 pixels
               SizedBox(
                 height: 20.0,
               ),
@@ -118,7 +118,7 @@ class _StoryPageState extends State<StoryPage> {
                 visible: storyBrain.buttonShouldBeVisible(),
                 //Blue Button of the App
                 child: Expanded(
-                  //flex is used to give the expanded widget 2 portions of the secreen space
+                  //flex is used to give the expanded widget 2 portions of the screen space
                   flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -132,7 +132,7 @@ class _StoryPageState extends State<StoryPage> {
                           storyBrain.nextStory(2);
                           //Set state is used to change the state and update it
                           setState(() {
-                            //On tapping the button the next story from the storyData list is being updated on the screen
+                            //On tapping the button the next story from the storyData list is updated on the screen
                             storyBrain.getStory();
                           });
                         },
@@ -140,7 +140,7 @@ class _StoryPageState extends State<StoryPage> {
                           child: Text(
                             //Text Align is used to center all the choices in the center of the button
                             textAlign: TextAlign.center,
-                            // Object storyBrain is acessing the StoryBrain for the choice2 in the storyData list
+                            // Object storyBrain is accessing the StoryBrain for the choice2 in the storyData list
                             storyBrain.getChoice2(),
                             style: TextStyle(
                               //White color is given to contrast the blue color

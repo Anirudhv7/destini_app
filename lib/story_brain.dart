@@ -1,8 +1,8 @@
 //Importing Story class from story.dart file
 import 'story.dart';
 
-//New Class called Storybrain is being created which consits a list with Story type called storyData
-// The storyData list has a type Story with a constructor which can only have string called storyTitle, String choice1 and String choice2
+//New Class called Storybrain is being created which consists of a list of Story type called storyData
+// The storyData list has a type Story with a constructor which can only have a string called storyTitle, String choice1, and String choice2
 class StoryBrain {
   //The '_' is used to make the list _storyData a private list
   final List<Story> _storyData = [
@@ -36,7 +36,7 @@ class StoryBrain {
         choice1: 'Restart',
         choice2: '')
   ];
-// getStory() is used to return the the current story based on the story number
+// getStory() is used to return the current story based on the story number
   String getStory() {
     return _storyData[_storyNumber].storyTitle;
   }
@@ -51,9 +51,9 @@ class StoryBrain {
     return _storyData[_storyNumber].choice2;
   }
 
-//_storyNumber tracks the current story number and is set to 0 as default
+//_storyNumber tracks the current story number and is set to 0 as the default
   int _storyNumber = 0;
-//nextStory() is used to change the story of based on the user's input
+//nextStory() is used to change the story based on the user's input
   void nextStory(int choiceNumber) {
     if (_storyNumber == 0) {
       if (choiceNumber == 1) {
@@ -74,8 +74,8 @@ class StoryBrain {
     }
   }
 
-//This Method is used to to show the visibility of the button based on bool trure or false
-//If the _storyNumber 0, 1 or 2 is in these numbers then it returns true
+//This Method is used to show the visibility of the button based on bool true or false
+//If the _storyNumber 0, 1, or 2 is in these numbers then it returns true
 //If the _storyNumber 3,4 or 5 is in these numbers then it returns false
   bool buttonShouldBeVisible() {
     if (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2) {
